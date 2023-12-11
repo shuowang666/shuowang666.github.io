@@ -264,31 +264,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Reconstruction-based approaches have achieved remarkable outcomes in anomaly detection.
+            The exceptional image reconstruction capabilities of recently popular diffusion models have sparked
+            research efforts to utilize them for enhanced reconstruction of anomalous images.
+            Nonetheless, these methods might face challenges related to the preservation of image categories and
+            pixel-wise structural integrity in the more
+            practical multi-class setting. To solve the above problems,
+            we propose a Difusion-based Anomaly Detection (DiAD)
+            framework for multi-class anomaly detection, which consists of a pixel-space autoencoder,
+            a latent-space Semantic-Guided (SG) network with a connection to the stable diffusion’s denoising network,
+            and a feature-space pre-trained feature extractor. Firstly, The SG network is proposed for
+            reconstructing anomalous regions while preserving the original image’s semantic information. Secondly, we introduce
+            Spatial-aware Feature Fusion (SFF) block to maximize reconstruction accuracy when dealing with extensively
+            reconstructed areas. Thirdly, the input and reconstructed images
+            are processed by a pre-trained feature extractor to generate
+            anomaly maps based on features extracted at different scales.
+            Experiments on MVTec-AD and VisA datasets demonstrate
+            the effectiveness of our approach which surpasses the state-of-the-art methods, e.g., achieving 96.8/52.6 and 97.2/99.0
+            (AUROC/AP) for localization and detection respectively on
+            multi-class MVTec-AD dataset.
           </p>
         </div>
       </div>
