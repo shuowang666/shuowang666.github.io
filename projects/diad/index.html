@@ -293,7 +293,55 @@
     </div>
     <!--/ Matting. -->
 
-    <!-- Animation. -->
+    <!-- Qualitative Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Results</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">MVTec-AD Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            We conducted substantial qualitative
+            experiments on MVTec-AD and VisA datasets to visually
+            demonstrate the superiority of our method in image reconstruction
+            and the accuracy of anomaly localization. As
+            shown in Figure 4, our method exhibits better reconstruction
+            capabilities for anomalous regions compared to the EdgRec
+            on MVTec-AD dataset. In comparison to UniAD shown in
+            Figure 5, our method exhibits more accurate anomaly localization
+            abilities on VisA dataset. More qualitative results
+            will be presented in Appendix.
+          </p>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/appdendix_mvtec_show.png.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/appdendix_mvtec_show2.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">VisA Dataset</h3>
+
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/app_visa_show.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Quantitative Results. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Quantitative Results</h2>
@@ -321,28 +369,7 @@
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
         </div>
-<!--        <div class="columns is-vcentered interpolation-panel">-->
-<!--          <div class="column is-3 has-text-centered">-->
-<!--            <img src="./static/images/interpolate_start.jpg"-->
-<!--                 class="interpolation-image"-->
-<!--                 alt="Interpolate start reference image."/>-->
-<!--            <p>Start Frame</p>-->
-<!--          </div>-->
-<!--          <div class="column interpolation-video-column">-->
-<!--            <div id="interpolation-image-wrapper">-->
-<!--              Loading...-->
-<!--            </div>-->
-<!--            <input class="slider is-fullwidth is-large is-info"-->
-<!--                   id="interpolation-slider"-->
-<!--                   step="1" min="0" max="100" value="0" type="range">-->
-<!--          </div>-->
-<!--          <div class="column is-3 has-text-centered">-->
-<!--            <img src="./static/images/interpolate_end.jpg"-->
-<!--                 class="interpolation-image"-->
-<!--                 alt="Interpolation end reference image."/>-->
-<!--            <p class="is-bold">End Frame</p>-->
-<!--          </div>-->
-<!--        </div>-->
+
         <br/>
         <!--/ Interpolating. -->
 
@@ -363,22 +390,9 @@
                  alt="Interpolate start reference image."/>
         </div>
 
-<!--        <div class="content has-text-centered">-->
-<!--          <video id="replay-video"-->
-<!--                 controls-->
-<!--                 muted-->
-<!--                 preload-->
-<!--                 playsinline-->
-<!--                 width="75%">-->
-<!--            <source src="./static/videos/replay.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
+    <!--/ Quantitative Results. -->
 
 
     <!-- Concurrent Work. -->
