@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DiAD: A Diffusion-based Framework for Multi-class Anomaly Detection">
+  <meta name="keywords" content="Diffusion model, Multi-class, Anomaly Detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiAD: A Diffusion-based Framework for Multi-class Anomaly Detection</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--  <link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<!--<nav class="navbar" role="navigation" aria-label="main navigation">-->
+<!--  <div class="navbar-brand">-->
+<!--    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">-->
+<!--      <span aria-hidden="true"></span>-->
+<!--      <span aria-hidden="true"></span>-->
+<!--      <span aria-hidden="true"></span>-->
+<!--    </a>-->
+<!--  </div>-->
+<!--  <div class="navbar-menu">-->
+<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
+<!--      <a class="navbar-item" href="">-->
+<!--      <span class="icon">-->
+<!--          <i class="fas fa-home"></i>-->
+<!--      </span>-->
+<!--      </a>-->
+
+<!--      <div class="navbar-item has-dropdown is-hoverable">-->
+<!--&lt;!&ndash;        <a class="navbar-link">&ndash;&gt;-->
+<!--&lt;!&ndash;          More Research&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--        <a class="navbar-navbar">-->
+<!--          <a class="navbar-item" href="https://zhangzin.github.io/#-publications" style="color: red; font-weight: bold;">-->
+<!--            More Researches-->
+<!--          </a>-->
+<!--        </a>-->
+<!--        <div class="navbar">-->
+<!--          <a class="navbar-item" href="https://lewandofskee.github.io/projects/diad" style="color: blue; font-weight: bold;">-->
+<!--            DiAD-->
+<!--          </a>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</nav>-->
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a >
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href=" ">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a >
+      <div class="navbar-item has-dropdown is-hoverable">
+        <!-- <a class="navbar-link">
+          More Researches
+        </a > -->
+        <!-- <div class="navbar-dropdown"> -->
+        <a class="navbar-navbar">
+          <!-- <a class="navbar-item" href="https://zhangzjn.github.io" style="color: #b02418; font-weight: bold; background-color: #e7bcb9;"> -->
+          <a class="navbar-item" href="https://zhangzjn.github.io/#-publications" style="color: #b02418; font-weight: bold;">
+            More Researches
+          </a >
+        </a >
+        <div class="navbar">
+          <a class="navbar-item" href="https://zhangzjn.github.io/projects/ViTAD">
+            ViTAD
+          </a >
+          <a class="navbar-item" href="https://zhangzjn.github.io/projects/InvAD">
+            InvAD
+          </a >
+          <a class="navbar-item" href="https://lewandofskee.github.io/projects/diad/"  style="color: #6a99d0; font-weight: bold; background-color: #dce3f2;">
+            DiAD
+          </a >
+          <!-- <a class="navbar-item" href="https://zhangzjn.github.io/projects/ViTAD">
+            ViTAD
+          </a > -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DiAD: A Diffusion-based Framework for Multi-class Anomaly Detection [AAAI'24]</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=8NfQv1sAAAAJ">Haoyang He</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhangzjn.github.io">Jiangning Zhang</a><sup>2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=uFT3YfMAAAAJ">Hongxu Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=LU4etJ0AAAAJ">Xuhai Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=9g-IRLsAAAAJ">Zhishan Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=1621dVIAAAAJ">Xu Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=xiK4nFUAAAAJ">Yabiao Wang</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=fqte5H4AAAAJ">Chengjie Wang</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ">Lei Xie</a><sup>1#</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University, Hangzhou, China</span>
+            <span class="author-block"><sup>2</sup>Youtu Lab, Tencent, Shanghai, China</span>
+          </div>
+
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block">(AAAI 2024)</span>-->
+<!--          </div>-->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/arxiv_wapp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.06607"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lewandofskee/DiAD"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reconstruction-based approaches have achieved remarkable outcomes in anomaly detection.
+            The exceptional image reconstruction capabilities of recently popular diffusion models have sparked
+            research efforts to utilize them for enhanced reconstruction of anomalous images.
+            Nonetheless, these methods might face challenges related to the preservation of image categories and
+            pixel-wise structural integrity in the more
+            practical multi-class setting. To solve the above problems,
+            we propose a Difusion-based Anomaly Detection (DiAD)
+            framework for multi-class anomaly detection, which consists of a pixel-space autoencoder,
+            a latent-space Semantic-Guided (SG) network with a connection to the stable diffusion’s denoising network,
+            and a feature-space pre-trained feature extractor. Firstly, The SG network is proposed for
+            reconstructing anomalous regions while preserving the original image’s semantic information. Secondly, we introduce
+            Spatial-aware Feature Fusion (SFF) block to maximize reconstruction accuracy when dealing with extensively
+            reconstructed areas. Thirdly, the input and reconstructed images
+            are processed by a pre-trained feature extractor to generate
+            anomaly maps based on features extracted at different scales.
+            Experiments on MVTec-AD and VisA datasets demonstrate
+            the effectiveness of our approach which surpasses the state-of-the-art methods, e.g., achieving 96.8/52.6 and 97.2/99.0
+            (AUROC/AP) for localization and detection respectively on
+            multi-class MVTec-AD dataset.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="columns is-centered">
+            <img src="./static/images/diad_wt.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+
+    <!-- Qualitative Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Results</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">MVTec-AD Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            We conducted substantial qualitative
+            experiments on MVTec-AD and VisA datasets to visually
+            demonstrate the superiority of our method in image reconstruction
+            and the accuracy of anomaly localization. As
+            shown in Figure 4, our method exhibits better reconstruction
+            capabilities for anomalous regions compared to the EdgRec
+            on MVTec-AD dataset. In comparison to UniAD shown in
+            Figure 5, our method exhibits more accurate anomaly localization
+            abilities on VisA dataset.
+          </p>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/appdendix_mvtec_show.png"
+                 class="interpolation-image"
+                 alt="MVTec-AD dataset demo1."/>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/appdendix_mvtec_show2.png"
+                 class="interpolation-image"
+                 alt="MVTec-AD dataset demo2."/>
+        </div>
+
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">VisA Dataset</h3>
+
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/app_visa_show.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+<!-- Quantitative Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Quantitative Results</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">MVTec-AD Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            As shown in Table 1 and in Table 3, our method achieves SOTA AUROC/AP/F1max metrics of 97.2/99.0/96.5 and 96.8/52.6/55.5 for image-wise and
+            pixel-wise respectively for multi-class setting on MVTec-
+            AD dataset. For the diffusion-based methods, our approach
+            significantly outperforms existing DDPM and LDM methods in terms of 11.7↑ in AUROC and 25↑ in AP for anomaly
+            localization. For non-diffusion methods, our approach surpasses existing methods in both metrics, especially at the
+            pixel level, where our method exceeds UniAD by 9.2↑/6.0↑
+            in AP/F1max.
+          </p>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/cls.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <div class="column is-center has-text-centered">
+            <img src="./static/images/seg.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">VisA Dataset</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our method has also demonstrated its superiority on VisA dataset, as shown in Table 2. Our approach
+            exhibits significant improvements compared to diffusion-based methods of 30.1↑/9.4↑ than the LDM method in
+            image/pixel AUROC. It also performs well compared to
+            UniAD by 4.9↑/6.0↑ in pixel AP/F1max metrics. Detailed
+            experiments for each category are provided in Appendix.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-three-fifths has-text-centered">
+              <img src="./static/images/visa.png"
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Quantitative Results. -->
+  </div>
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{he2023diad,
+      title={DiAD: A Diffusion-based Framework for Multi-class Anomaly Detection},
+      author={Haoyang He and Jiangning Zhang and Hongxu Chen and Xuhai Chen and Zhishan Li and Xu Chen and Yabiao Wang and Chengjie Wang and Lei Xie},
+      year={2023},
+      eprint={2312.06607},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/arxiv_wapp.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/lewandofskee/DiAD" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> for our website.
+            We sincerely appreciate Nerfies authors for their awesome templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
