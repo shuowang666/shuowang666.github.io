@@ -219,7 +219,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in anomaly detection have seen the efficacy of CNN- and transformer-based approaches. However, CNNs struggle with long-range dependencies, while transformers are burdened by quadratic computational complexity. Mamba-based models, with their superior long-range modeling and linear efficiency, have garnered substantial attention. This study pioneers the application of Mamba to multi-class unsupervised anomaly detection, presenting MambaAD, which consists of a pre-trained encoder and a Mamba decoder featuring Locality-Enhanced State Space (LSS) modules at multi-scales. The proposed LSS module, integrating parallel cascaded (Hybrid State Space) HSS blocks and multi-kernel convolutions operations, effectively captures both long-range and local information. The HSS block, utilizing (Hybrid Scanning) HS encoders, encodes feature maps into five scanning methods and eight directions, thereby strengthening global connections through the (State Space Model) SSM. The use of Hilbert scanning and eight directions significantly improves feature sequence modeling. Comprehensive experiments on six diverse anomaly detection datasets and seven metrics demonstrate state-of-the-art performance, substantiating the method's effectiveness.
+            Recent advancements in anomaly detection have seen the efficacy of CNN- and transformer-based approaches. However, CNNs struggle with long-range dependencies, while transformers are burdened by quadratic computational complexity. Mamba-based models, with their superior long-range modeling and linear efficiency, have garnered substantial attention. This study pioneers the application of Mamba to multi-class unsupervised anomaly detection, presenting MambaAD, which consists of a pre-trained encoder and a Mamba decoder featuring Locality-Enhanced State Space (LSS) modules at multi-scales. The proposed LSS module, integrating parallel cascaded (Hybrid State Space) HSS blocks and multi-kernel convolutions operations, effectively captures both long-range and local information. The HSS block, utilizing (Hybrid Scanning) HS encoders, encodes feature maps into five scanning methods and eight directions, thereby strengthening global connections through the (State Space Model) SSM. The use of Hilbert scanning and eight directions significantly improves feature sequence modeling. Comprehensive experiments on six diverse anomaly detection datasets and seven metrics demonstrate SoTA performance, substantiating the method's effectiveness.
           </p>
         </div>
       </div>
@@ -250,7 +250,7 @@
         <h3 class="title is-4">MVTec-AD and VisA Datasets</h3>
         <div class="content has-text-justified">
           <p>
-            We conducted qualitative experiments on MVTev-AD and VisA datasets that substantiated the accuracy of our method in anomaly segmentation. The Fig. 4 demonstrates that our method possesses more precise anomaly segmentation capabilities. Compared to DiAD, our method delivers more accurate anomaly segmentation, without significant anomaly segmentation bias.
+            We conducted qualitative experiments on MVTev-AD and VisA datasets that substantiated the accuracy of our method in anomaly segmentation. The Fig. 4 demonstrates that our method possesses more precise anomaly segmentation capabilities. Compared to DiAD, UniAD and RD4AD, our method delivers more accurate anomaly segmentation, without significant anomaly segmentation bias.
           </p>
         </div>
         <div class="column is-center has-text-centered">
@@ -292,12 +292,12 @@
           </p>
         </div>
         <div class="column is-center has-text-centered">
-            <img src="./static/images/cls.png"
+            <img src="./static/images/mvtec_sp.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
         </div>
         <div class="column is-center has-text-centered">
-            <img src="./static/images/seg.png"
+            <img src="./static/images/mvtec_px.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
         </div>
