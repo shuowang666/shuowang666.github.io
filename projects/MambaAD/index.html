@@ -113,7 +113,7 @@
           <a class="navbar-item" href="https://zhangzjn.github.io/projects/InvAD">
             InvAD
           </a >
-          <a class="navbar-item" href="https://lewandofskee.github.io/projects/diad/"  style="color: #6a99d0; font-weight: bold; background-color: #dce3f2;">
+          <a class="navbar-item" href="https://lewandofskee.github.io/projects/diad/">
             DiAD
           </a >
           <a class="navbar-item" href="https://lewandofskee.github.io/projects/MambaAD/"  style="color: #6a99d0; font-weight: bold; background-color: #dce3f2;">
@@ -144,7 +144,7 @@
             <span class="author-block">
               <a href="https://scholar.google.com/citations?hl=zh-CN&user=ucCvgooAAAAJ">Yuhu Bai</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://zhangzjn.github.io">Jiangning Zhang</a><sup>2</sup>,</span>
+              <a href="https://zhangzjn.github.io">Jiangning Zhang</a><sup>2#</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?hl=zh-CN&user=gUJWww0AAAAJ">Qingdong He</a><sup>2</sup>,</span>
             <span class="author-block">
@@ -170,9 +170,6 @@
             <span class="author-block"><sup>3</sup>Nanyang Technological University, Singapore</span>
           </div>
 
-<!--          <div class="is-size-5 publication-authors">-->
-<!--            <span class="author-block">(AAAI 2024)</span>-->
-<!--          </div>-->
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -197,14 +194,14 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/lewandofskee/DiAD"
+                <a href="https://github.com/lewandofskee/MambaAD"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
-              </div>
+            </div>
 
           </div>
         </div>
@@ -223,32 +220,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Reconstruction-based approaches have achieved remarkable outcomes in anomaly detection.
-            The exceptional image reconstruction capabilities of recently popular diffusion models have sparked
-            research efforts to utilize them for enhanced reconstruction of anomalous images.
-            Nonetheless, these methods might face challenges related to the preservation of image categories and
-            pixel-wise structural integrity in the more
-            practical multi-class setting. To solve the above problems,
-            we propose a Difusion-based Anomaly Detection (DiAD)
-            framework for multi-class anomaly detection, which consists of a pixel-space autoencoder,
-            a latent-space Semantic-Guided (SG) network with a connection to the stable diffusion’s denoising network,
-            and a feature-space pre-trained feature extractor. Firstly, The SG network is proposed for
-            reconstructing anomalous regions while preserving the original image’s semantic information. Secondly, we introduce
-            Spatial-aware Feature Fusion (SFF) block to maximize reconstruction accuracy when dealing with extensively
-            reconstructed areas. Thirdly, the input and reconstructed images
-            are processed by a pre-trained feature extractor to generate
-            anomaly maps based on features extracted at different scales.
-            Experiments on MVTec-AD and VisA datasets demonstrate
-            the effectiveness of our approach which surpasses the state-of-the-art methods, e.g., achieving 96.8/52.6 and 97.2/99.0
-            (AUROC/AP) for localization and detection respectively on
-            multi-class MVTec-AD dataset.
+            Recent advancements in anomaly detection have seen the efficacy of CNN- and transformer-based approaches. However, CNNs struggle with long-range dependencies, while transformers are burdened by quadratic computational complexity. Mamba-based models, with their superior long-range modeling and linear efficiency, have garnered substantial attention. This study pioneers the application of Mamba to multi-class unsupervised anomaly detection, presenting MambaAD, which consists of a pre-trained encoder and a Mamba decoder featuring Locality-Enhanced State Space (LSS) modules at multi-scales. The proposed LSS module, integrating parallel cascaded (Hybrid State Space) HSS blocks and multi-kernel convolutions operations, effectively captures both long-range and local information. The HSS block, utilizing (Hybrid Scanning) HS encoders, encodes feature maps into five scanning methods and eight directions, thereby strengthening global connections through the (State Space Model) SSM. The use of Hilbert scanning and eight directions significantly improves feature sequence modeling. Comprehensive experiments on six diverse anomaly detection datasets and seven metrics demonstrate state-of-the-art performance, substantiating the method's effectiveness.
           </p>
         </div>
       </div>
 
     </div>
     <div class="columns is-centered">
-            <img src="./static/images/diad_wt.png"
+            <img src="./static/images/mambaad.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
       </div>
