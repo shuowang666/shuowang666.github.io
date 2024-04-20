@@ -1,25 +1,4 @@
-I am **Xiangtai Li (李祥泰)** and I work on computer vision and related problems.
+I am **Haoyang He (何昊阳)**. I'm currently pursuing my Ph.D. degree at Zhejiang University in China and expect to graduate in 2027. My advisor is Professor [Lei Xie](https://person.zju.edu.cn/leigh). Currently, I'm interning at Tencent YouTu Lab, Shanghai, mentored by Researcher [Jiangning Zhang](https://zhangzjn.github.io/). 
 
-Previously, I worked as a **Research Fellow** at [MMLab@NTU](https://www.mmlab-ntu.com/), S-Lab advised by [Prof.Chen Change Loy](https://www.mmlab-ntu.com/person/ccloy/) and research scientist intern in JD AI / Sensetime / Shanghai AI Laboratory.
+My main research interest is **Anomaly Detection**. In the past I have used diffusion models ([DiAD](https://github.com/lewandofskee/DiAD)) as well as Mamba models ([MambaAD](https://github.com/lewandofskee/MambaAD)) for multi-class anomaly detection.
 
-I obtained my PhD degree at Peking University under the supervision of [Prof.Yunhai Tong](https://scholar.google.com/citations?user=T4gqdPkAAAAJ&hl=zh-CN), and my bachelor's degree at Beijing University of Posts and Telecommunications.
-
-My research topics are:
-
-1, Scene understanding tasks. (Image/Video/3D detection and segmentation)
-
-2, Multi-modal learning with LLMs. (Connect visual perception with Large language models)
-
-3, Image/Video Generation/Synthesis/Editing. (Diffusion models)
-
-
-Besides, I am also very interested at aerial image analysis since I am a fun of history and military games. 
-
-[//]: # (During my PhD, I conducted research on image/video semantic/instance/panoptic segmentation, as well as several related scene understanding problems.)
-
-Moreover, most of my works, including the ones I have profoundly contributed to, are open-sourced on GitHub.
-
-Find the code and models [here](https://github.com/lxtGH).
-
-
-Feel free to contact me via email at xiangtai94@gmail.com or lxtpku@pku.edu.cn. 
