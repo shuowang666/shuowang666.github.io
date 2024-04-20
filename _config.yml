@@ -21,15 +21,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Xiangtai Li"
+  name             : "Haoyang He"
   avatar           : "images/lxt_personal_phd_year_4.png"
-  bio              : "Research Fellow in NTU. Previous PhD in PKU"
-  location         : "Singapore"
+  bio              : "PhD Student in ZJU"
+  location         : "Zhejiang University"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=FL3ReD0AAAAJ&hl=zh-CN"
-  email            : "lxtpku@pku.edu.cn"
-  researchgate     :  "https://www.researchgate.net/profile/Xiangtai-Li"
+  googlescholar    : "https://scholar.google.com/citations?user=8NfQv1sAAAAJ&hl=zh-CN"
+  email            : "haoyanghe@zju.edu.cn"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -37,21 +37,21 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :  "lxtGH" # e.g., "github username"
+  github           :  "lewandofskee" # e.g., "github username"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : # e.g., "linkedin username"
-  dblp             : "https://dblp.org/pid/239/4017.html"
-  orcid            : "https://orcid.org/0000-0002-0550-8247"
+  dblp             :
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "xtl994"
+  twitter          :
   vine             :
   weibo            :
   xing             :
