@@ -19,7 +19,7 @@
 
 <li><a href="https://arxiv.org/abs/2311.02612">GPT-4V-AD: Exploring Grounding Potential of VQA-oriented GPT-4V for Zero-shot Anomaly Detection</a>,  
      Jiangning Zhang*, <strong>Haoyang He*</strong>, Xuhai Chen, Zhucun Xue, Yabiao Wang, Chengjie Wang, Lei Xie, Yong Liu
-      <strong>arxiv. <span style="color:red"> The first Mamba model for multi-class anomaly detection. </span> </strong> <a href="https://arxiv.org/abs/2311.02612">[Paper]</a> | <a href="https://github.com/zhangzjn/GPT-4V-AD">[Code]</a> </li>
+      <strong>arxiv. <span style="color:red"></span> </strong> <a href="https://arxiv.org/abs/2311.02612">[Paper]</a> | <a href="https://github.com/zhangzjn/GPT-4V-AD">[Code]</a> </li>
 
 <li><a href="https://arxiv.org/abs/2311.00453">Clip-ad: A language-guided staged dual-path model for zero-shot anomaly detection</a>,  
      Xuhai Chen, Jiangning Zhang, Guanzhong Tian, <strong>Haoyang He</strong>, Wuhao Zhang, Yabiao Wang, Chengjie Wang, Yunsheng Wu, Yong Liu 
