@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Xiangtai Li"
-description              : "Research on Scene Understanding"
-repository               : "lxtGH/lxtGH.github.io"
+title                    : "Haoyang He"
+description              : "Research on Anomaly Detection"
+repository               : "lewandofskee/lewandofskee.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
