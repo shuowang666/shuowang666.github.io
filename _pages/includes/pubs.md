@@ -26,7 +26,7 @@
       <strong>arxiv. <span style="color:red">  </span> </strong> <a href="https://arxiv.org/abs/2311.00453">[Paper]</a> | <a href="https://github.com/ByChelsea/CLIP-AD">[Code]</a> </li>
 
 <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865523002398">Towards accurate dense pedestrian detection via occlusion-prediction aware label assignment and hierarchical-NMS</a>,  
-     <strong>Haoyang He*</strong>, Zhishan Li, Guanzhong Tian, Hongxu Chen, Lei Xie, Shan Lu, Hongye Su 
+     <strong>Haoyang He</strong>, Zhishan Li, Guanzhong Tian, Hongxu Chen, Lei Xie, Shan Lu, Hongye Su 
       <strong>PRL. <span style="color:red"> </span> </strong> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865523002398">[Paper]</a> </li>
 
 
