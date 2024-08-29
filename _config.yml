@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Haoyang He"
-description              : "Research on Anomaly Detection"
-repository               : "lewandofskee/lewandofskee.github.io"
+title                    : "Shuo Wang"
+description              : "Research on AIGC and Autonomous Driving"
+repository               : "shuowang666/shuowang.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,14 +21,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Haoyang He"
-  avatar           : "images/hhy2.png"
-  bio              : "PhD Student at ZJU"
-  location         : "Hangzhou, China"
+  name             : "Shuo Wang"
+  avatar           : ""
+  bio              : "Tencent"
+  location         : "Shanghai, China"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=8NfQv1sAAAAJ&hl"
-  email            : "haoyanghe@zju.edu.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=6toGO3wAAAAJ&hl"
+  email            : "shuowang2322@mail.ustc.edu.cn"
   researchgate     :
   uri              :
   bitbucket        :
@@ -37,7 +37,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :  "lewandofskee" # e.g., "github username"
+  github           :  "shuowang666" # e.g., "github username"
   google_plus      :
   keybase          :
   instagram        :
