@@ -4,6 +4,15 @@
 
 
 
+## 2025
+
+<li><a href="https://openreview.net/pdf?id=kW2u5szHb6">WaveAR: Wavelet-Aware Continuous Autoregressive Diffusion for Accurate Human Motion Prediction</a>,  
+     Shengchuan Gao*, <strong>Shuo Wang*</strong>, Yabiao Wang, Ran Yi
+      <strong>(NIPS). 2025. </strong> <a href="https://openreview.net/pdf?id=kW2u5szHb6">[Paper]</a> </a> </li>
+      
+<li><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_TIMotion_Temporal_and_Interactive_Framework_for_Efficient_Human-Human_Motion_Generation_CVPR_2025_paper.pdf">TIMotion: Temporal and Interactive Framework for Efficient Human-Human Motion Generation</a>,  
+     <strong>Shuo Wang*</strong> 
+      <strong>(CVPR). 2025. </strong> <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_TIMotion_Temporal_and_Interactive_Framework_for_Efficient_Human-Human_Motion_Generation_CVPR_2025_paper.pdf">[Paper]</a> | <a href="https://github.com/AIGC-Explorer/TIMotion">[Code]</a> </li>
 
 ## 2024
 
