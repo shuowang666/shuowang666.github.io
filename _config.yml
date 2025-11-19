@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Shuo Wang"
-description              : "Research on AIGC and Autonomous Driving"
+description              : "Research on LLM, AIGC and Autonomous Driving"
 repository               : "shuowang666/shuowang.github.io"
 google_scholar_stats_use_cdn : true
 
